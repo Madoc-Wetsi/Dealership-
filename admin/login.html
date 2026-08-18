@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login — Mofty Dealership</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <div class="login-wrap">
+    <form id="login-form" class="login-card" novalidate>
+      <div class="logo-mark">M</div>
+      <h1>Mofty Dealership</h1>
+      <p>Admin dashboard — enter your password</p>
+      <input type="text" id="username" placeholder="Username" autocomplete="username" required />
+      <input type="password" id="password" placeholder="Password" autocomplete="current-password" required />
+      <button class="btn btn--primary" type="submit">Sign In</button>
+      <p id="login-msg" style="color: var(--md-primary); font-weight: 700; display: none; margin-bottom: 0"></p>
+    </form>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var form = document.getElementById("login-form");
+      var msg = document.getElementById("login-msg");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        var apiUrl = new URL("../api/login.php", window.location.href).href;
+
+        fetch(apiUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value
+          })
+        })
+          .then(function (res) {
+            if (res.ok) {
+              window.location.href = "index.html";
+              return null;
+            }
+            // Even error responses should be JSON; if they aren't (HTML/PHP
+            // crash/404), surface a useful hint instead of a generic message.
+            return res.text().then(function (text) {
+              try {
+                return JSON.parse(text);
+              } catch (parsed) {
+                return {
+                  error: "Got an unexpected response (" + res.status + "). " +
+                         "The page must be served via http://localhost/ — not " +
+                         "opened as a file. Check api/" + "login.php" + " in your browser for details."
+                };
+              }
+            });
+          })
+          .then(function (body) {
+            if (body && body.error) {
+              msg.textContent = body.error;
+              msg.style.display = "block";
+            }
+          })
+          .catch(function () {
+            msg.style.display = "block";
+            if (window.location.protocol === "file:") {
+              msg.textContent =
+                "You opened this page directly from disk. Open it as " +
+                "http://localhost/dealership/admin/login.html instead.";
+            } else {
+              msg.textContent =
+                "Could not reach " + apiUrl +
+                ". Make sure Apache and MySQL are running in XAMPP.";
+            }
+          });
+      });
+    })();
+  </script>
+</body>
+</html>

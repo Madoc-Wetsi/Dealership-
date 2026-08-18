@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Mofty Dealership</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+
+  <header class="admin-header">
+    <a class="brand" href="index.html">
+      <span class="logo-mark">M</span>
+      <span>
+        <b>Mofty Dealership</b>
+        <small>Admin</small>
+      </span>
+    </a>
+    <div class="actions">
+      <a href="../inventory.html" target="_blank" rel="noopener">&rarr; View storefront</a>
+      <button class="btn btn--ghost btn--sm" id="logout" type="button">Log out</button>
+    </div>
+  </header>
+
+  <main class="dash">
+    <div class="dash-top">
+      <div>
+        <h1>Manage Inventory</h1>
+        <p>Add, edit or remove vehicles — changes appear on the storefront instantly.</p>
+      </div>
+      <button class="btn btn--primary" id="reset-form" type="button">+ Add New Car</button>
+    </div>
+
+    <div class="grid">
+      <!-- Form -->
+      <section class="card">
+        <h2 id="form-title">Add a vehicle</h2>
+        <form id="car-form" novalidate>
+          <div class="form-row2">
+            <div class="field required">
+              <label for="f-brand">Brand</label>
+              <input type="text" id="f-brand" name="brand" placeholder="Porsche" required />
+            </div>
+            <div class="field required">
+              <label for="f-model">Model</label>
+              <input type="text" id="f-model" name="model" placeholder="911 Turbo S" required />
+            </div>
+          </div>
+
+          <div class="form-row2">
+            <div class="field required">
+              <label for="f-price">Price (GHS)</label>
+              <input type="number" id="f-price" name="price" min="0" step="500" placeholder="89500" required />
+            </div>
+            <div class="field">
+              <label for="f-body">Body style</label>
+              <input type="text" id="f-body" name="body" list="body-options" placeholder="Coupe" />
+              <datalist id="body-options">
+                <option value="Coupe"></option>
+                <option value="Sedan"></option>
+                <option value="SUV"></option>
+                <option value="Convertible"></option>
+                <option value="Hatchback"></option>
+                <option value="Truck"></option>
+              </datalist>
+            </div>
+          </div>
+
+          <div class="form-row2">
+            <div class="field">
+              <label for="f-transmission">Transmission</label>
+              <input type="text" id="f-transmission" name="transmission" placeholder="8-Speed Auto" />
+            </div>
+            <div class="field">
+              <label for="f-fuel">Fuel</label>
+              <input type="text" id="f-fuel" name="fuel" list="fuel-options" placeholder="Petrol" />
+              <datalist id="fuel-options">
+                <option value="Petrol"></option>
+                <option value="Diesel"></option>
+                <option value="Electric"></option>
+                <option value="Hybrid"></option>
+              </datalist>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-description">Description</label>
+            <textarea id="f-description" name="description" rows="4" placeholder="Full history, condition, spec highlights, standard features, etc."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="f-image">Car photo</label>
+            <input type="file" id="f-image" accept="image/jpeg,image/png,image/webp,image/gif" />
+            <input type="hidden" id="f-image-path" />
+            <p class="hint" id="image-hint">Choose a JPG, PNG or WebP photo (up to 8 MB).</p>
+            <img id="image-preview" alt="Car photo preview" style="display:none; max-width:100%; max-height:150px; margin-top:10px; border-radius:8px; border:1px solid var(--md-border)" />
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Save Vehicle</button>
+            <button class="btn btn--dark" id="cancel-edit" type="button">Cancel Edit</button>
+          </div>
+
+          <div class="edit-banner" id="edit-banner">
+            Editing vehicle #<span id="edit-id"></span> — <span id="edit-name"></span>
+          </div>
+
+          <div class="msg" id="form-msg"></div>
+        </form>
+      </section>
+
+      <!-- Inventory list -->
+      <section class="card">
+        <h2>Current inventory</h2>
+        <div class="table-wrap">
+          <table class="cars">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Vehicle</th>
+                <th>Details</th>
+                <th>Price</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="cars-tbody">
+              <tr><td colspan="6"><div class="empty">Loading inventory…</div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>
