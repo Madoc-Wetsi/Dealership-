@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mofty Dealership — Luxury Pre-Owned Cars</title>
+  <meta name="description" content="Mofty Dealership: curated luxury performance cars, transparent pricing, trade-ins and financing." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <span class="topbar__hours">Open Mon–Sat <strong>9:00–19:00</strong></span>
+      <span><a class="topbar__link" href="tel:+233544496778">054 449 6778</a></span>
+      <span><a class="topbar__link" href="contact.html">Showroom &amp; Directions</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Mofty Dealership home">
+        <span class="logo__mark">M</span>
+        <span>
+          <span class="logo__name">MOFTY DEALERSHIP</span><br />
+          <span class="logo__tag">Luxury Pre-Owned</span>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a class="is-active" href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="financing.html">Financing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn--primary nav__cta" href="inventory.html">Browse Cars</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div>
+        <span class="hero__kicker">Certified luxury performance</span>
+        <h1 class="hero__title">Drive the car you <em>dreamed about.</em></h1>
+        <p class="hero__text">
+          Every vehicle at Mofty Dealership is hand-selected, fully inspected and
+          warrantied. Transparent pricing. No-haggle policy. Real, honest service.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="inventory.html">View Inventory</a>
+          <a class="btn btn--outline-light" href="financing.html">Get Pre-Qualified</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <b id="inventory-count">12</b>
+            <small>Vehicles in stock</small>
+          </div>
+          <div class="hero__stat">
+            <b>210+</b>
+            <small>Cars sold in 2025</small>
+          </div>
+          <div class="hero__stat">
+            <b>4.9/5</b>
+            <small>Google rating</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__car">
+          <svg viewBox="0 0 460 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g transform="translate(12 6)">
+              <ellipse cx="230" cy="126" rx="196" ry="12" fill="rgba(255,255,255,0.12)"/>
+              <path d="M28 104 h22 l14 -26 h60 l10 -34 q4 -8 12 -8 h78 l18 18 q6 5 16 5 h38 l30 26 q6 5 14 5 v14 h-52 q-8 0 -8 6 q0 4 -8 4 h-212 q-8 0 -8 -6 q0 -4 -8 -4 h-26 v-16z" fill="#c8102e"/>
+              <path d="M126 74 l8 -22 h66 l-8 24 h-66z" fill="#9db2c4"/>
+              <path d="M196 52 h58 l30 26 h-66z" fill="#8ba3b7"/>
+              <path d="M120 78 q-4 14 -2 24" stroke="rgba(0,0,0,0.18)" stroke-width="2" fill="none"/>
+              <path d="M36 100 l14 -20 q2 -3 6 -3 h12 q2 0 2 2 l-8 21 h-26z" fill="#fff7c9"/>
+              <path d="M352 100 h38 v10 h-44 q2 -3 6 -10z" fill="#ff3b30"/>
+              <g><circle cx="92" cy="104" r="24" fill="#111318"/><circle cx="92" cy="104" r="13" fill="#3b444d"/><circle cx="92" cy="104" r="5" fill="#cfd6dd"/></g>
+              <g><circle cx="318" cy="104" r="24" fill="#111318"/><circle cx="318" cy="104" r="13" fill="#3b444d"/><circle cx="318" cy="104" r="5" fill="#cfd6dd"/></g>
+            </g>
+          </svg>
+        </div>
+        <div class="hero__badge">Ferrari F8 Spider · In stock now</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand rail -->
+  <div class="brands">
+    <div class="brands__inner">
+      <span>Ferrari</span><span>Porsche</span><span>Bentley</span><span>AMG</span>
+      <span>Tesla</span><span>BMW M</span><span>Audi RS</span><span>Aston Martin</span>
+    </div>
+  </div>
+
+  <!-- Featured vehicles -->
+  <section class="section">
+    <div class="container">
+      <span class="section__kicker">Latest stock</span>
+      <h2 class="section__heading">Fresh arrivals</h2>
+      <p class="section__sub text-center mx-auto">
+        A snapshot of what has just hit the floor. Every car includes a 150-point
+        inspection, completed service history and a 12-month warranty.
+      </p>
+      <div id="featured-grid" class="car-grid"></div>
+      <div class="text-center" style="margin-top: 34px">
+        <a class="btn btn--outline" href="inventory.html">See All Vehicles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section class="section section--alt">
+    <div class="container">
+      <span class="section__kicker">The Mofty difference</span>
+      <h2 class="section__heading">No-haggle, no nonsense</h2>
+      <p class="section__sub">
+        We took everything you dislike about buying a car and removed it.
+      </p>
+      <div class="features">
+        <div class="feature">
+          <div class="feature__icon">&#128270;</div>
+          <h3>150-Point Inspection</h3>
+          <p>Every car passes a certified multi-point inspection covering
+          mechanical, electrical, paint and accident history before it earns a spot.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">&#128196;</div>
+          <h3>Transparent Pricing</h3>
+          <p>One honest price. No hidden add-ons, no negotiation games, no surprises
+          at the finance desk.</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">&#128295;</div>
+          <h3>12-Month Warranty</h3>
+          <p>Every sale includes a bumper-to-bumper warranty, a 7-day/500-mile
+          money-back guarantee and 24/7 roadside assistance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <span class="section__kicker">Happy owners</span>
+      <h2 class="section__heading text-center">What drivers say</h2>
+      <p class="section__sub text-center mx-auto">
+        Real reviews from real buyers who picked up their next car from Mofty Dealership.
+      </p>
+      <div class="testimonials">
+        <div class="testimonial">
+          <p class="testimonial__quote">
+            "Flawless process. The M4 was exactly as described, the paperwork took
+            an hour, and they even delivered it to my door."
+          </p>
+          <div class="testimonial__who">
+            <span class="testimonial__avatar">DM</span>
+            <div>
+              <div class="testimonial__name">Daniel M.</div>
+              <div class="testimonial__meta">BMW M4 Competition</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__quote">
+            "First dealership that didn't try to upsell me. They found better
+            financing than my bank did. Where do I sign?"
+          </p>
+          <div class="testimonial__who">
+            <span class="testimonial__avatar">AR</span>
+            <div>
+              <div class="testimonial__name">Amanda R.</div>
+              <div class="testimonial__meta">Tesla Model S Plaid</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial__quote">
+            "Bought my G63 sight unseen from a video call. It arrived cleaner than
+            promised. These guys get it."
+          </p>
+          <div class="testimonial__who">
+            <span class="testimonial__avatar">JK</span>
+            <div>
+              <div class="testimonial__name">Jordan K.</div>
+              <div class="testimonial__meta">Mercedes G 63 AMG</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <h2>Your dream car is one click away</h2>
+    <p>Browse the live inventory or talk to a specialist about finding the exact build you want.</p>
+    <a class="btn" href="contact.html">Book a Test Drive</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <span class="logo__mark" style="margin-bottom: 10px">A</span>
+        <h4>MOFTY DEALERSHIP</h4>
+        <p>
+          Luxury pre-owned performance cars. Hand-picked inventory, fair prices,
+          and a buying experience worth writing home about.
+        </p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="financing.html">Financing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer__links">
+          <li><a href="financing.html">Financing &amp; Leasing</a></li>
+          <li><a href="contact.html">Trade-In Appraisal</a></li>
+          <li><a href="contact.html">Nationwide Delivery</a></li>
+          <li><a href="contact.html">Consignment Sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <ul class="footer__links">
+          <li>1400 Velocity Blvd</li>
+          <li>Los Angeles, CA</li>
+          <li><a href="tel:+233544496778">054 449 6778</a></li>
+          <li><a href="mailto:sales@moftydealership.example">sales@moftydealership.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy; <span id="year">2026</span> Mofty Dealership. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/format.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

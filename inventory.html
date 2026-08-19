@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory — Mofty Dealership</title>
+  <meta name="description" content="Browse the live Mofty Dealership luxury pre-owned inventory. Filter by brand, body style, fuel and price." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <span class="topbar__hours">Open Mon–Sat <strong>9:00–19:00</strong></span>
+      <span><a class="topbar__link" href="tel:+233544496778">054 449 6778</a></span>
+      <span><a class="topbar__link" href="contact.html">Showroom &amp; Directions</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Mofty Dealership home">
+        <span class="logo__mark">M</span>
+        <span>
+          <span class="logo__name">MOFTY DEALERSHIP</span><br />
+          <span class="logo__tag">Luxury Pre-Owned</span>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="is-active" href="inventory.html">Inventory</a></li>
+          <li><a href="financing.html">Financing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn--primary nav__cta" href="inventory.html">Browse Cars</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page header -->
+  <section class="inventory-top">
+    <div class="container">
+      <h1>Live Inventory</h1>
+      <p>
+        Every listing below is current and available. Use the filters to find
+        your exact spec, or call us and we'll source it for you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filters + grid -->
+  <section class="inventory-body container">
+    <aside class="filters" aria-label="Inventory filters">
+      <h3>Filters</h3>
+
+      <div class="filter-group">
+        <label for="filter-search">Search</label>
+        <input type="text" id="filter-search" placeholder="e.g. 911, M4, Tesla…" />
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-brand">Brand</label>
+        <select id="filter-brand">
+          <option value="all">All brands</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-body">Body style</label>
+        <select id="filter-body">
+          <option value="all">All styles</option>
+          <option value="Coupe">Coupe</option>
+          <option value="Convertible">Convertible</option>
+          <option value="Grand Tourer">Grand Tourer</option>
+          <option value="Electric Sedan">Electric Sedan</option>
+          <option value="SUV">SUV</option>
+          <option value="Sportback">Sportback</option>
+          <option value="Track Special">Track Special</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-fuel">Fuel type</label>
+        <select id="filter-fuel">
+          <option value="all">Any fuel</option>
+          <option value="Petrol">Petrol</option>
+          <option value="Electric">Electric</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-price">Max price</label>
+        <select id="filter-price">
+          <option value="all">Any price</option>
+          <option value="0-500000">Up to GH₵500k</option>
+          <option value="500000-1500000">GH₵500k – GH₵1.5M</option>
+          <option value="1500000-4000000">GH₵1.5M – GH₵4M</option>
+          <option value="4000000-99999999">GH₵4M+</option>
+        </select>
+      </div>
+
+      <button class="filters__reset" id="filter-reset" type="button">
+        Reset all filters
+      </button>
+    </aside>
+
+    <div>
+      <div class="inventory-results-head">
+        <span class="result-count" id="result-count">9 vehicles</span>
+        <div class="sort">
+          <label for="filter-sort" class="sr-only">Sort by</label>
+          <select id="filter-sort" aria-label="Sort by">
+            <option value="default">Featured</option>
+            <option value="newest">Newest first</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+          </select>
+        </div>
+      </div>
+      <div id="inventory-grid" class="car-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <span class="logo__mark" style="margin-bottom: 10px">A</span>
+        <h4>MOFTY DEALERSHIP</h4>
+        <p>
+          Luxury pre-owned performance cars. Hand-picked inventory, fair prices,
+          and a buying experience worth writing home about.
+        </p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="financing.html">Financing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer__links">
+          <li><a href="financing.html">Financing &amp; Leasing</a></li>
+          <li><a href="contact.html">Trade-In Appraisal</a></li>
+          <li><a href="contact.html">Nationwide Delivery</a></li>
+          <li><a href="contact.html">Consignment Sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <ul class="footer__links">
+          <li>1400 Velocity Blvd</li>
+          <li>Los Angeles, CA</li>
+          <li><a href="tel:+233544496778">054 449 6778</a></li>
+          <li><a href="mailto:sales@moftydealership.example">sales@moftydealership.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy; <span id="year">2026</span> Mofty Dealership. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/format.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

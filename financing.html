@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Financing — Mofty Dealership</title>
+  <meta name="description" content="Financing, leasing and trade-in options at Mofty Dealership. Estimate your monthly payment instantly." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <span class="topbar__hours">Open Mon–Sat <strong>9:00–19:00</strong></span>
+      <span><a class="topbar__link" href="tel:+233544496778">054 449 6778</a></span>
+      <span><a class="topbar__link" href="contact.html">Showroom &amp; Directions</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Mofty Dealership home">
+        <span class="logo__mark">M</span>
+        <span>
+          <span class="logo__name">MOFTY DEALERSHIP</span><br />
+          <span class="logo__tag">Luxury Pre-Owned</span>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a class="is-active" href="financing.html">Financing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn--primary nav__cta" href="inventory.html">Browse Cars</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="page-banner">
+    <h1>Financing &amp; Leasing</h1>
+    <p>
+      Flexible terms on new and pre-owned inventory. Competitive rates, instant
+      decisions and no prepayment penalties — ever.
+    </p>
+  </section>
+
+  <!-- Finance content -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="finance-grid">
+        <div>
+          <span class="section__kicker">How it works</span>
+          <h2 class="section__heading" style="margin-bottom: 22px">Three easy steps</h2>
+          <div class="finance-steps">
+            <div class="fin-step">
+              <span class="fin-step__num">1</span>
+              <div>
+                <h3>Get pre-qualified</h3>
+                <p>
+                  A soft credit check won't affect your score. Approval in minutes
+                  with decisions from more than 20 lenders.
+                </p>
+              </div>
+            </div>
+            <div class="fin-step">
+              <span class="fin-step__num">2</span>
+              <div>
+                <h3>Pick your car</h3>
+                <p>
+                  Bring your approval to the showroom, on our website, or shop
+                  anywhere — we'll match the car to the payment.
+                </p>
+              </div>
+            </div>
+            <div class="fin-step">
+              <span class="fin-step__num">3</span>
+              <div>
+                <h3>Drive away the same day</h3>
+                <p>
+                  e-Sign your paperwork, arrange delivery or nationwide transport,
+                  and take the keys home — usually within hours.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="notice">
+            <strong>Trade-in credit:</strong> Tell us about your current car and we'll
+            apply its appraised value straight to your purchase or lease.
+          </div>
+        </div>
+
+        <!-- Calculator -->
+        <div class="calc">
+          <h2>Payment estimator</h2>
+          <p style="color: var(--color-gray-500); font-size: 0.9rem; margin-bottom: 20px">
+            Adjust the sliders to see your estimated monthly payment.
+          </p>
+
+          <div class="calc-field">
+            <label for="calc-price">Vehicle price (GHS)</label>
+            <input type="number" id="calc-price" value="89500" min="5000" step="500" />
+          </div>
+
+          <div class="calc-field">
+            <label for="calc-down">Down payment — <span id="calc-down-value" class="range-value"></span></label>
+            <input type="range" id="calc-down" min="0" max="100000" step="1000" value="15000" />
+          </div>
+
+          <div class="calc-field">
+            <label for="calc-term">Loan term</label>
+            <select id="calc-term">
+              <option value="36">36 months</option>
+              <option value="48">48 months</option>
+              <option value="60" selected>60 months</option>
+              <option value="72">72 months</option>
+              <option value="84">84 months</option>
+            </select>
+          </div>
+
+          <div class="calc-field">
+            <label for="calc-rate">Interest rate — <span id="calc-rate-value" class="range-value">5.9%</span></label>
+            <input type="range" id="calc-rate" min="0" max="14" step="0.1" value="5.9" />
+          </div>
+
+          <div class="calc-result">
+            <div class="calc-result__label">Estimated monthly payment</div>
+            <div class="calc-result__pay" id="calc-payment">—</div>
+            <div class="calc-result__detail">
+              Total payments: <span id="calc-total-pay">—</span> ·
+              Total interest: <span id="calc-total-interest">—</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-band">
+    <h2>Ready to get pre-qualified?</h2>
+    <p>No impact to your credit score. Free, fast and 100% obligation-free.</p>
+    <a class="btn" href="contact.html">Start My Application</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <span class="logo__mark" style="margin-bottom: 10px">A</span>
+        <h4>MOFTY DEALERSHIP</h4>
+        <p>
+          Luxury pre-owned performance cars. Hand-picked inventory, fair prices,
+          and a buying experience worth writing home about.
+        </p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="financing.html">Financing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer__links">
+          <li><a href="financing.html">Financing &amp; Leasing</a></li>
+          <li><a href="contact.html">Trade-In Appraisal</a></li>
+          <li><a href="contact.html">Nationwide Delivery</a></li>
+          <li><a href="contact.html">Consignment Sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <ul class="footer__links">
+          <li>1400 Velocity Blvd</li>
+          <li>Los Angeles, CA</li>
+          <li><a href="tel:+233544496778">054 449 6778</a></li>
+          <li><a href="mailto:sales@moftydealership.example">sales@moftydealership.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy; <span id="year">2026</span> Mofty Dealership. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/format.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

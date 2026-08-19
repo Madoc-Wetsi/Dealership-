@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vehicle Detail — Mofty Dealership</title>
+  <meta name="description" content="Vehicle details, specifications and pricing." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="topbar__inner">
+      <span class="topbar__hours">Open Mon–Sat <strong>9:00–19:00</strong></span>
+      <span><a class="topbar__link" href="tel:+233544496778">054 449 6778</a></span>
+      <span><a class="topbar__link" href="contact.html">Showroom &amp; Directions</a></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="index.html" aria-label="Mofty Dealership home">
+        <span class="logo__mark">M</span>
+        <span>
+          <span class="logo__name">MOFTY DEALERSHIP</span><br />
+          <span class="logo__tag">Luxury Pre-Owned</span>
+        </span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="is-active" href="inventory.html">Inventory</a></li>
+          <li><a href="financing.html">Financing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a class="btn btn--primary nav__cta" href="inventory.html">Browse Cars</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Vehicle header -->
+  <section class="vehicle-hero">
+    <div class="container">
+      <p><a href="inventory.html" style="color:#f2a81c">&larr; Back to inventory</a></p>
+      <h1 id="vehicle-title">Vehicle</h1>
+      <p class="vehicle-sub" id="vehicle-sub"></p>
+    </div>
+  </section>
+
+  <!-- Detail layout -->
+  <section class="vehicle-layout container">
+    <div id="vehicle-root"></div>
+
+    <aside class="vehicle-side">
+      <div class="buy-panel" id="buy-panel"></div>
+
+      <div class="contact-ship">
+        <h3>Enquire or schedule a viewing</h3>
+        <p>
+          Prefer to talk? Call the showroom at
+          <strong>054 449 6778</strong> or use the contact form and we'll get
+          back to you the same day.
+        </p>
+        <a class="btn btn--outline btn--block" href="contact.html">Contact Sales</a>
+      </div>
+    </aside>
+  </section>
+
+  <div class="container" style="padding-bottom: 66px">
+    <h3 style="font-size: 1.2rem; margin-bottom: 8px">Overview</h3>
+    <p id="vehicle-desc" class="section__sub" style="max-width: 760px; white-space: pre-line"></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <span class="logo__mark" style="margin-bottom: 10px">A</span>
+        <h4>MOFTY DEALERSHIP</h4>
+        <p>
+          Luxury pre-owned performance cars. Hand-picked inventory, fair prices,
+          and a buying experience worth writing home about.
+        </p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="inventory.html">Inventory</a></li>
+          <li><a href="financing.html">Financing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer__links">
+          <li><a href="financing.html">Financing &amp; Leasing</a></li>
+          <li><a href="contact.html">Trade-In Appraisal</a></li>
+          <li><a href="contact.html">Nationwide Delivery</a></li>
+          <li><a href="contact.html">Consignment Sales</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <ul class="footer__links">
+          <li>1400 Velocity Blvd</li>
+          <li>Los Angeles, CA</li>
+          <li><a href="tel:+233544496778">054 449 6778</a></li>
+          <li><a href="mailto:sales@moftydealership.example">sales@moftydealership.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy; <span id="year">2026</span> Mofty Dealership. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/format.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
